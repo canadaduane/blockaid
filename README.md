@@ -30,6 +30,8 @@ $ npm run dev
 mysql is required, but is not listening on port 3306.
 ```
 
+The shell return value will be "0" (indicating success) or "1" (indicating failure to meet the requirement specified).
+
 ## Instructions
 
 ```
