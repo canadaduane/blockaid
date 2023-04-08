@@ -1,12 +1,19 @@
 {
   "name": "blockaid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Require that a port is listening, not listening, or kill if listening",
+  "author": "Duane Johnson",
+  "license": "MIT",
   "main": "index.js",
   "type": "module",
   "bin": {
     "blockaid": "bin/cli.js"
   },
+  "files": [
+    "bin/cli.js" ,
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "start": "node bin/cli.js"
   },
@@ -15,8 +22,6 @@
     "kill",
     "listen"
   ],
-  "author": "Duane Johnson",
-  "license": "MIT",
   "dependencies": {
     "kill-port": "^2.0.1"
   }
