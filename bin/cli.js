@@ -21,7 +21,7 @@ for (let i = 0; i < args.length; i++) {
     case "-h":
     case "--help":
       console.log(
-        "\n>>> blockade : Require that a port is listening, not listening, or kill whatever is found listening.\n\n\n" +
+        "\n>>> blockaid : Require that a port is listening, not listening, or kill whatever is found listening.\n\n\n" +
           "  -r, --require-listening PROGRAM_NAME:PORT\n\n" +
           "    Require that a process is listening at PORT; PROGRAM_NAME is used for error messages\n\n\n" +
           "  -x, --require-not-listening PROGRAM_NAME:PORT\n\n" +

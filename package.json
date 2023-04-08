@@ -1,11 +1,11 @@
 {
-  "name": "blockade",
+  "name": "blockaid",
   "version": "1.0.0",
   "description": "Require that a port is listening, not listening, or kill if listening",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "blockade": "bin/cli.js"
+    "blockaid": "bin/cli.js"
   },
   "scripts": {
     "start": "node bin/cli.js"
