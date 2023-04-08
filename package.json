@@ -1,0 +1,23 @@
+{
+  "name": "blockade",
+  "version": "1.0.0",
+  "description": "Require that a port is listening, not listening, or kill if listening",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "blockade": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "keywords": [
+    "port",
+    "kill",
+    "listen"
+  ],
+  "author": "Duane Johnson",
+  "license": "MIT",
+  "dependencies": {
+    "kill-port": "^2.0.1"
+  }
+}
