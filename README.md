@@ -29,3 +29,25 @@ In this example, if port 3306 is not running, then an easy-to-understand error m
 $ npm run dev
 mysql is required, but is not listening on port 3306.
 ```
+
+## Instructions
+
+```
+>>> blockaid : Require that a port is listening, not listening, or kill whatever is found listening.
+
+
+  -r, --require-listening PROGRAM_NAME:PORT
+
+    Require that a process is listening at PORT; PROGRAM_NAME is used for error messages
+
+
+  -x, --require-not-listening PROGRAM_NAME:PORT
+
+    Require that a process is NOT listening at PORT; PROGRAM_NAME is used for error messages
+
+
+  -k, --kill-if-listening PROGRAM_NAME:PORT
+
+    If a process is listening at PORT, kill it; PROGRAM_NAME is used for console message
+
+```
