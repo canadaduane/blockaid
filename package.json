@@ -1,6 +1,6 @@
 {
   "name": "blockaid",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Require that a port is listening, not listening, or kill if listening",
   "author": "Duane Johnson",
   "license": "MIT",
