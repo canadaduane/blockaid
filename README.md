@@ -30,6 +30,14 @@ $ npm run dev
 mysql is required, but is not listening on port 3306.
 ```
 
+You can also use an environment variable, such as `PORT`, rather than a concrete port number. Here, we kill an existing listening process on `PORT` before starting the server:
+
+```json
+"scripts": {
+  "dev": "PORT=3000 blockaid -k service:PORT && nodemon server.js"
+}
+```
+
 The shell return value will be "0" (indicating success) or "1" (indicating failure to meet the requirement specified).
 
 ## Instructions

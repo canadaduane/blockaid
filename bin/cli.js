@@ -12,6 +12,12 @@ const REQ = {
   kill_if_listening: 3,
 };
 
+// From https://stackoverflow.com/a/175787
+function isNumeric(str) {
+  if (typeof str != "string") return false;
+  return !isNaN(str) && !isNaN(parseFloat(str));
+}
+
 // Loop through the arguments and process them
 for (let i = 0; i < args.length; i++) {
   let requirement = null;
@@ -60,9 +66,31 @@ for (let i = 0; i < args.length; i++) {
 
   const [program, port] = args[i + 1].split(":");
   if (program != null && port != null) {
-    requirements.push({ port: parseInt(port, 10), program, requirement });
+    if (isNumeric(port)) {
+      requirements.push({ port: parseInt(port, 10), program, requirement });
+    } else {
+      if (port in process.env) {
+        if (isNumeric(process.env[port])) {
+          requirements.push({
+            port: parseInt(process.env[port], 10),
+            program,
+            requirement,
+          });
+        } else {
+          console.error(
+            `Error: env var '${port}' is not numeric: ${process.env[port]}`
+          );
+          exit(1);
+        }
+      } else {
+        console.error(
+          `Error: trying to use '${port}' as env var, but it is not set`
+        );
+        exit(1);
+      }
+    }
   } else {
-    console.log("Error: program and port expected, e.g. program:3001");
+    console.error("Error: program and port expected, e.g. program:3001");
     process.exit(1);
   }
 
@@ -100,7 +128,6 @@ void (async () => {
         `port ${r.port} must be free, but a process (e.g. ${program}) is already listening. Killing process...`
       );
       await killPort(r.port, "tcp");
-      process.exit(1);
     }
   }
 })();
