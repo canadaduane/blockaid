@@ -1,17 +1,17 @@
 {
   "name": "blockaid",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Require that a port is listening, not listening, or kill if listening",
   "author": "Duane Johnson",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/duanejohnson/blockaid.git"
+    "url": "https://github.com/canadaduane/blockaid.git"
   },
   "bugs": {
-    "url": "https://github.com/duanejohnson/blockaid/issues"
+    "url": "https://github.com/canadaduane/blockaid/issues"
   },
-  "homepage": "https://github.com/duanejohnson/blockaid#readme",
+  "homepage": "https://github.com/canadaduane/blockaid#readme",
   "main": "index.js",
   "type": "module",
   "bin": {
